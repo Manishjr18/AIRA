@@ -1,0 +1,234 @@
+/* ✅ Light/Dark Mode Adaptation */
+:root {
+    --bg-primary: #f5f5f5;
+    --primary-color: #000000;
+    --text-secondary: #555;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --primary-color: #07cef1;
+    --text-secondary: #fefefe;
+    --card-bg: rgba(0, 0, 0, 0.2);
+}
+
+  
+
+  /* html, body {
+    background: var(--background-color) !important;
+    color: var(--text-color);
+    transition: background 0.3s ease-in-out;
+  } */
+  
+  
+  .main-container {
+    display: flex;
+    height: 100vh;
+    background: var(--background-color);
+  }
+  
+  .feature-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .feature-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Adjusted gap */
+    color: var(--text-color);
+  }
+  
+  .feature-subtext {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--subtext-color);
+    margin-bottom: 40px; /* Adjusted gap */
+  }
+  
+  .split-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px; /* Gap between code box and report box */
+  }
+  
+  .code-box, .report-box {
+    flex: 1;
+    padding: 25px;
+    background: var(--secondary-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(211, 61, 96, 0.586);
+    height: 400px; /* Reduced height for both boxes */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .code-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Reduced gap between input and button */
+    border: 1px solid #ccc;
+    border: 2px solid transparent;
+  animation: border-glow 1.5s infinite alternate;
+  }
+  
+  .code-input {
+    width: 100%;
+    flex: 1; /* Take remaining space inside the box */
+    font-family: "Courier New", Courier, monospace;
+    background: var(--secondary-background);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none; /* Disable resizing */
+  }
+  
+  .detect-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 8px; /* Reduced gap */
+  }
+  
+  .detect-btn:hover {
+    background: #0056b3; /* Darker shade on hover */
+  }
+  
+  .report-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Gap between content and button */
+    /* border: 1px solid #ccc; */
+    border: 2px solid transparent;
+  animation: border-glow 1.5s infinite alternate;
+  }
+  
+  .report-placeholder {
+    font-size: 1.1rem;
+    color: var(--subtext-color);
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .report-content {
+    font-family: "Courier New", Courier, monospace;
+    background: var(--secondary-background);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    flex: 1; /* Take remaining space inside the box */
+  }
+  
+  .download-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #28a745; /* Green color for download button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background: #218838; /* Darker shade on hover */
+  }
+
+  .analyze-another-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #ffc107; /* Yellow color for analyze another button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .analyze-another-btn:hover {
+    background: #e0a800; /* Darker shade on hover */
+  }
+
+  .detect-btn.loading {
+    background: #6c757d; /* Gray color for loading state */
+    cursor: not-allowed; /* Disable cursor */
+  }
+  
+  .detect-btn.loading::after {
+    content: " Your code is analyzing, please wait...";
+    font-weight: normal;
+  }
+
+
+/* Scrollable Report Box with Blue Border */
+.scrollable-report {
+  max-height: 300px; /* Fix height so it doesn't overflow */
+  overflow-y: auto; /* Scrollable when content exceeds */
+  border: 3px solid rgb(255, 0, 217);
+  padding: 10px;
+  background: #f4f4f4; /* Light background for contrast */
+  border-radius: 3px;
+  color: #0479f6;
+
+}
+
+/* Adjust report content inside the box */
+.report-content {
+  font-family: monospace;
+  font-size: 14px; /* Small Font to Fit All Content */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #04d1f6;
+}
+
+/* Fix Button Alignment */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Report Details */
+.report-detail {
+  font-size: 14px;
+  font-weight: bold;
+  color: #00c9f1;
+  margin-bottom: 5px;
+}
+
+
+.animated-border {
+  border: 1.5px solid transparent;
+  animation: border-glow 1.5s infinite alternate;
+}
+
+@keyframes border-glow {
+  50% { border-color: #00ffff; }
+  30% { border-color: #ff0000; }
+  70% { border-color: #c7e76f; }
+  55% { border-color: #9909e7; }
+  100% {border-color: #f79205;}
+}
+
+

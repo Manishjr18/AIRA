@@ -1,0 +1,149 @@
+/* 🌊 Wave Background */
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: waveMove 5s infinite linear;
+  z-index: -1; /* Waves should stay in the background */
+}
+
+/* ✅ Light Mode Wave */
+.light-wave {
+  background-image: url("https://raw.githubusercontent.com/developedbyed/waves/main/light.svg");
+}
+
+/* ✅ Dark Mode Wave */
+.dark-wave {
+  background-image: url("https://raw.githubusercontent.com/developedbyed/waves/main/dark.svg");
+}
+
+/* 🌊 Wave Animation */
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* 🎨 Features Page Styling */
+.features-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* ⬆️ Heading Ko Upar Karne Ke Liye */
+  padding-top: 80px; /* Navbar ke just 1-2cm niche */
+}
+
+/* 🏆 Features Title */
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* 🏗️ Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 📦 Feature Box */
+.feature-box {
+  background: var(--card-bg);
+  /* background: rgba(203, 158, 126, 0.523); */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(136, 38, 38, 0.666);
+}
+
+/* 🔥 Feature Box Hover Effect */
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 20px 30px rgb(1, 202, 252);
+  background: rgba(17, 79, 141, 0.163); /* 🔵 Light Blue Background */
+}
+
+/* 🔥 Glow Effect on Hover */
+.feature-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ✨ Show Glow on Hover */
+.feature-box:hover::before {
+  opacity: 1;
+}
+
+/* 🏷️ Feature Icon */
+.feature-box i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* 📜 Feature Text */
+.feature-box h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* 🔽 Below Features Content */
+.features-footer {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .feature-box h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+

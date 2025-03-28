@@ -1,0 +1,50 @@
+/* 📌 src/styles/Dashboard.css */
+.dashboard {
+    display: flex;
+    background: linear-gradient(to right, #7dc1de, #608895, #56beeb);
+    height: 100vh;
+    color: rgb(218, 35, 35);
+  }
+  
+  /* 🚀 Title with Neon Glow */
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #b10c36;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* 🛠️ Glassmorphic Cards with Neon Glow */
+  .dashboard-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dashboard-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🔥 Stats */
+  .dashboard-stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+  }
+  
+  .dashboard-stat-label {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  

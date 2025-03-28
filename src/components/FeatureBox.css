@@ -1,0 +1,14 @@
+.feature-box {
+    background: rgba(231, 221, 221, 0.707);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  

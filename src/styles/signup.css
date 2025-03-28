@@ -1,0 +1,108 @@
+/* 🔥 Full-screen background animation */
+.signup-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto; /* ✅ Container level scroll */
+    background: #000000;
+    
+  }
+  
+  /* 🔹 Animated Gradient Background */
+  .signup-animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/back.jpg');
+    background-size: cover;
+  }
+  
+  /* 🔥 Project Title + Icon */
+  .signup-project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px; /* Reduced font size */
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px; /* Reduced margin */
+    background: linear-gradient(45deg, #00a8d7, #0072ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* 🔥 Icon Glow Effect */
+  .signup-project-icon {
+    font-size: 100px; /* Reduced icon size */
+    color: #fecb00;
+    text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+  }
+  
+  /* 🔹 Futuristic Signup Box */
+  .signup-box {
+    background: rgba(5, 195, 216, 0.8);
+    /* border-radius: 10px; */
+    padding: 16px; /* Reduced padding */
+    width: 380px; /* Slightly reduced width */
+    height: auto; /* Height auto for content */
+    box-shadow: 0 0 15px rgb(209, 29, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    overflow: hidden; /* Remove scroll inside box */
+    margin: 20px 0; /* Add margin for spacing */
+    border: 3px solid transparent;
+    animation: border-glow 1.5s infinite alternate;
+  }
+  
+  /* 🔥 High-Tech Text Effect */
+  .signup-title {
+    font-size: 22px; /* Reduced font size */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px; /* Reduced margin */
+  }
+  
+  /* 🔹 Buttons: Glow Effect */
+  .signup-animated-btn {
+    position: relative;
+    overflow: hidden;
+    /* -webkit-text-fill-color: #1976d1; */
+    transition: all 0.3s ease-in-out;
+    color: #0072ff;
+  }
+  
+  .signup-animated-btn:hover {
+    background: #b94b4b !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px #e94560;
+  }
+  
+  /* 🔹 Google & GitHub Buttons Hover Effect */
+  .google-button:hover,
+  .github-button:hover {
+    background: #b94b4b !important;
+    color: #f0efef !important;
+    box-shadow: 0 0 10px #45cbe9;
+  }
+
+  
+
+@keyframes border-glow {
+  10% { border-color: #ffb300; }
+  30% { border-color: #822cd7ca; }
+  50% { border-color: #d43e20d2; }
+  100% {border-color: #1ba8b8;}
+}

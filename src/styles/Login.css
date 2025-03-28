@@ -1,0 +1,105 @@
+/* 🔥 Full-screen background animation */
+.login-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #121212;
+  }
+  
+  /* 🔹 Animated Gradient Background */
+  .animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(-45deg, #090909, #303030, #557398, #423033); */
+    background-image: url('../assets/back.jpg');
+
+    background-size:cover ;
+    /* animation: gradientBG 8s ease infinite; */
+  }
+  
+  /* 🔥 Background Animation */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+/* 🔥 Project Title + Icon */
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #00a8d7, #0072ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+  
+  /* 🔥 Icon Glow Effect */
+  .project-icon {
+    font-size: 120px;
+    color: #fecb00;
+    text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+  }
+  
+
+  /* 🔹 Futuristic Login Box */
+  .login-box {
+    background: rgba(5, 195, 216, 0.8);
+    /* border-radius: 10px; */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgb(209, 29, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid transparent;
+    animation: border-glow 1.5s infinite alternate;
+  }
+  
+  /* 🔥 High-Tech Text Effect */
+  .login-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* 🔹 Buttons: Glow Effect */
+  .animated-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .animated-btn:hover {
+    background: #b94b4b !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px #e94560;
+  }
+
+  @keyframes border-glow {
+    10% { border-color: #ffb300; }
+    30% { border-color: #822cd7ca; }
+    50% { border-color: #d43e20d2; }
+    100% {border-color: #1ba8b8;}
+  }
+  

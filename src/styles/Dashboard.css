@@ -1,0 +1,110 @@
+/* ✅ Dashboard Main Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background: var(--bg-primary);
+    color: var(--primary-color);
+    overflow-y: auto;
+}
+
+/* ✅ Heading Alignment */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 153, 255);
+    text-transform: uppercase;
+}
+
+.dashboard-subtitle {
+    font-size: 1.2rem;
+    color: beige;
+}
+
+/* ✅ Stats Cards */
+.dashboard-card {
+    background: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(238, 168, 168, 0.886);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    backdrop-filter: blur(15px);
+}
+
+.dashboard-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgb(3, 151, 231);
+    background: rgba(242, 239, 239, 0);
+}
+
+/* ✅ Enlarged Chart Container */
+.chart-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    width: calc(163% - 80px); /* 🔹 Making it stretch as per stat cards */
+    margin: 20px auto;
+}
+
+.chart-container:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Flexbox for Even Spacing */
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.chart-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ✅ Background Animation */
+@keyframes animatedBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.dashboard {
+    background: linear-gradient(-45deg, #090a0f, #1b1c2e, #2d2f3f, #090a0f);
+    background-size: 400% 400%;
+    animation: animatedBackground 10s infinite ease-in-out;
+}
+
+/* ✅ Light/Dark Mode Adaptation */
+:root {
+    --bg-primary: #f5f5f5;
+    --primary-color: #000000;
+    --text-secondary: #555;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --primary-color: #07cef1;
+    --text-secondary: #fefefe;
+    --card-bg: rgba(0, 0, 0, 0.2);
+}

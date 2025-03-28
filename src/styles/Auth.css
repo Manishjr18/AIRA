@@ -1,0 +1,72 @@
+/* 🔥 Full Page Background */
+.auth-container {
+    display: flex;
+    justify-content: flex-end; /* ✅ Signup Right Side */
+    align-items: center;
+    height: 100vh; /* ✅ Full height */
+    width: 100vw; /* ✅ Full width */
+    background: url("../assets/futuristic-bg.jpg") center/cover no-repeat;
+    background-attachment: fixed; /* ✅ Background image fixed */
+    overflow: hidden; /* ✅ Ensures no white space */
+    position: relative;
+  }
+  
+  /* 🔹 Signup Container */
+  .signup-container {
+    justify-content: flex-end; /* ✅ Opposite to Login */
+    margin-right: 40px; /* ✅ Right side se 2-3 cm gap */
+  }
+  
+  /* 🔹 Auth Box */
+  .auth-box {
+    width: 400px;
+    min-height: 450px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+    overflow: hidden; /* ✅ Ensures border animation doesn't overflow */
+  }
+  
+  /* 🔥 Border Animation */
+  .auth-box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #edeb68, #48ff00, #00fff7, #4400ff, #ff00ff);
+    background-size: 400%;
+    z-index: -1; /* ✅ Ensures it stays behind the box */
+    animation: borderMove 4s linear infinite;
+    border-radius: 12px;
+  }
+  
+  @keyframes borderMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* ✅ Input Fields & Buttons Styling */
+  .auth-box input, .auth-box button {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+  
+  /* 🔹 Ensure Inputs and Buttons Take Full Width */
+  .auth-box input, .auth-box button {
+    width: 100%;
+    box-sizing: border-box; /* ✅ Ensures padding is included in width */
+  }
