@@ -15,7 +15,7 @@ AIRA (AI-Powered Code Review & Bug Detection System) is a high-performance AI-ba
 ✅ **Real-Time Code Metrics Dashboard** – Live monitoring and analysis of code performance  
 ✅ **Light & Dark Mode** – Modern UI with theme switching  
 ✅ **User Authentication** – Secure login with Firebase (Email, Google, GitHub)  
-✅ **History Tracking** – View previous code analysis reports  
+
 
 ---
 
