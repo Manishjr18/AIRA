@@ -16,19 +16,39 @@ AIRA (AI-Powered Code Review & Bug Detection System) is a high-performance AI-ba
 ✅ **Light & Dark Mode** – Modern UI with theme switching  
 ✅ **User Authentication** – Secure login with Firebase (Email, Google, GitHub)  
 
-
 ---
 
 ## 🖥️ **Tech Stack**  
-| Layer | Technology |
-|-------|------------|
-| **Frontend** | React.js (Material-UI, Framer Motion) |
-| **Backend** | Flask (Python) |
-| **AI Tools** | Pylint, SonarQube, Bandit |
-| **Database** | PostgreSQL/MySQL |
-| **Authentication** | Firebase (Email, Google, GitHub) |
-| **Deployment** | Vercel (Frontend), Firebase (Backend) |
+| Layer            | Technology                              |
+|------------------|----------------------------------------|
+| **Frontend**     | React.js (Material-UI, Framer Motion) |
+| **Backend**      | Flask (Python)                         |
+| **AI Tools**     | Pylint, SonarQube, Bandit             |
+| **Database**     | PostgreSQL/MySQL                       |
+| **Authentication** | Firebase (Email, Google, GitHub)   |
+| **Deployment**   | Vercel (Frontend), Firebase (Backend) |
 
 ---
 
+## 🔮 **Future Enhancements**
 
+- 🤖 **Automated AI Code Refactoring & Optimization** — Fully automatic improvement suggestions.
+- 🌐 **Multi-language Support** — Analyze and review code in multiple programming languages.
+- 📊 **Advanced Analytics & Visualizations** — Deeper insights into code metrics and trends.
+- 🔗 **GitHub/GitLab Integration** — Direct integration for seamless PR/code review workflows.
+- 💬 **AI-Powered Chat Support** — Interactive assistant to answer coding queries in real time.
+
+---
+
+## 💬 **Get in touch**
+
+Have questions, feature suggestions, or want to collaborate?  
+
+- 🟢 **Open an issue** on GitHub.
+- 💬 **Join discussions** in GitHub Discussions.
+
+---
+
+⭐ **If you like this project, please give it a star and share it!**
+
+---
